@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: jobmate-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python backend/backend_api.py
+    envVars:
+      - key: FLASK_ENV
+        value: development
+    autoDeploy: true
