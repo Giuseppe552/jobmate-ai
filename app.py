@@ -23,6 +23,6 @@ def match():
 
     return jsonify({'match_score': score})
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=10000)
-
+if __name__ == "__main__":
+    # Hugging Face Spaces requires port 7860
+    app.run(host="0.0.0.0", port=7860)
