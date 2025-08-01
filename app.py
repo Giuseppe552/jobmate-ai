@@ -1,28 +1,24 @@
-from flask import Flask, request, jsonify
+import gradio as gr
 from sentence_transformers import SentenceTransformer, util
-from flask_cors import CORS
-
-app = Flask(__name__)
-CORS(app)
 
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 
-@app.route('/match', methods=['POST'])
-def match():
-    data = request.json
-    cv_text = data.get('cv_text')
-    job_description = data.get('job_description')
-
+def match_score(cv_text, job_description):
     if not cv_text or not job_description:
-        return jsonify({'error': 'Missing data'}), 400
+        return "Error: Missing input"
 
     embedding_1 = model.encode(cv_text, convert_to_tensor=True)
     embedding_2 = model.encode(job_description, convert_to_tensor=True)
 
     score = util.cos_sim(embedding_1, embedding_2).item()
+    return f"Match Score: {score:.2f}"
 
-    return jsonify({'match_score': score})
+demo = gr.Interface(
+    fn=match_score,
+    inputs=["text", "text"],
+    outputs="text",
+    title="JobMate AI",
+    description="Enter a CV and Job Description to see how well they match."
+)
 
-if __name__ == "__main__":
-    # Hugging Face Spaces requires port 7860
-    app.run(host="0.0.0.0", port=7860)
+demo.launch()
