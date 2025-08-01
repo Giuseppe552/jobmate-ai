@@ -34,3 +34,13 @@ This project is licensed under the [MIT License](LICENSE).
 ## Author
 
 👤 [@Giuseppe552](https://github.com/Giuseppe552)
+
+## 🔀 Two Versions
+
+This repo contains two implementations:
+
+- `backend/` and `frontend/` → Original Flask + React version
+- `huggingface-version/` → Lightweight Gradio version deployed on Hugging Face
+
+Check out the [Gradio demo here](https://huggingface.co/spaces/giuseppe552/jobmate-ai))
+
