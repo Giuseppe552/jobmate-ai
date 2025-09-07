@@ -31,18 +31,18 @@ JobMate AI is a smart assistant that helps job seekers match their CVs to job de
 1. **Clone the repo**  
    ```bash
    git clone https://github.com/Giuseppe552/jobmate-ai.git
-
+  ```
 **2. Set up the Python backend**
   ```bash
    cd backend
    pip install -r requirements.txt
-
+  ```
 **3. Start the React frontend**
   ```bash
    cd frontend/jobmate-ui
    npm install
    npm run dev
-
+  ```
 
 
 
