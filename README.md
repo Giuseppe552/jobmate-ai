@@ -1,3 +1,20 @@
+# ⚠️ Project Moved
+
+This repo is the **legacy prototype** of JobMate AI, built with Gradio/Hugging Face for a quick demo.  
+It is no longer maintained.  
+
+👉 Please see the **new, production-ready version** here:  
+➡️ [JobMateAI (Next.js + FastAPI on Vercel/Render)](https://github.com/Giuseppe552/JobmateAI)  
+
+**Live Demo**  
+- Frontend: [Vercel App](https://jobmate-ai-six.vercel.app/)  
+- Backend: [Render API](https://jobmateai-api.onrender.com/health)  
+
+---
+
+This old repo remains public for reference only.  
+
+
 # 💼 JobMate AI
 
 JobMate AI is a smart assistant that helps job seekers match their CVs to job descriptions using AI-powered similarity scoring.
